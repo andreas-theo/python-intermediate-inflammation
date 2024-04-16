@@ -127,6 +127,14 @@ def patient_normalise(data):
     return normalised
 
 
+def daily_std(data):
+    """Calculate the daily standard deviation of a 2D inflammation data array.
+
+    :param data: An array containing the inflammation data.
+    :return: A daily standard deviation of the inflammation data."""
+    return np.std(data, axis=0)
+
+
 def daily_above_threshold(patient_row, data, threshold):
     """Find the daily values that are above a threshold for a given patient.
 
