@@ -56,7 +56,7 @@ def test_daily_std(test, expected):
     npt.assert_array_almost_equal(daily_std(np.array(test)), np.array(expected), decimal=6)
 
 
-def test_daily_min_string():    
+def test_daily_min_string():
     """Test for TypeError when passing strings"""
     from inflammation.models import daily_min
 
@@ -81,4 +81,3 @@ def test_patient_normalise(test, expected, expect_raises):
             npt.assert_almost_equal(patient_normalise(np.array(test)), np.array(expected), decimal=2)
     else:
         npt.assert_almost_equal(patient_normalise(np.array(test)), np.array(expected), decimal=2)
-
